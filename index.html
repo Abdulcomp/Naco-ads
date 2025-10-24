@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NACOads - Showcase Your Business with Style</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-bullhorn"></i>
+                <span>NACOads</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#gallery" class="nav-link">Gallery</a></li>
+                <li><a href="#media" class="nav-link">Media</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">NACOads</h1>
+            <p class="hero-tagline">Showcase your business with style.</p>
+            <p class="hero-subtext">Promote your products and services with stunning visuals and media.</p>
+            <button class="cta-button" onclick="scrollToSection('gallery')">
+                Explore Gallery
+                <i class="fas fa-arrow-right"></i>
+            </button>
+        </div>
+        <div class="hero-background"></div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <h2 class="section-title">Our Gallery</h2>
+            <p class="section-subtitle">Stunning visuals showcasing our advertising portfolio</p>
+            
+            <div class="gallery-grid">
+                <div class="gallery-card">
+                    <div class="gallery-image">
+                        <img src="images/ad-1.jpg" alt="Professional Advertisement 1">
+                        <div class="gallery-overlay">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                    <div class="gallery-info">
+                        <h3>Premium Brand Campaign</h3>
+                        <p>High-impact visual storytelling for luxury brands</p>
+                    </div>
+                </div>
+
+                <div class="gallery-card">
+                    <div class="gallery-image">
+                        <img src="images/ad-2.jpg" alt="Professional Advertisement 2">
+                        <div class="gallery-overlay">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                    <div class="gallery-info">
+                        <h3>Digital Marketing</h3>
+                        <p>Engaging content for social media and web platforms</p>
+                    </div>
+                </div>
+
+                <div class="gallery-card">
+                    <div class="gallery-image">
+                        <img src="images/ad-3.jpg" alt="Professional Advertisement 3">
+                        <div class="gallery-overlay">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                    <div class="gallery-info">
+                        <h3>Product Showcase</h3>
+                        <p>Compelling product photography and presentation</p>
+                    </div>
+                </div>
+
+                <div class="gallery-card">
+                    <div class="gallery-image">
+                        <img src="images/ad-4.jpg" alt="Professional Advertisement 4">
+                        <div class="gallery-overlay">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                    <div class="gallery-info">
+                        <h3>Event Promotion</h3>
+                        <p>Dynamic visuals for events and special occasions</p>
+                    </div>
+                </div>
+
+                <div class="gallery-card">
+                    <div class="gallery-image">
+                        <img src="images/ad-5.jpg" alt="Professional Advertisement 5">
+                        <div class="gallery-overlay">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                    <div class="gallery-info">
+                        <h3>Corporate Identity</h3>
+                        <p>Professional branding and corporate communications</p>
+                    </div>
+                </div>
+
+                <div class="gallery-card">
+                    <div class="gallery-image">
+                        <img src="images/ad-6.jpg" alt="Professional Advertisement 6">
+                        <div class="gallery-overlay">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                    <div class="gallery-info">
+                        <h3>Seasonal Campaigns</h3>
+                        <p>Timely and relevant promotional materials</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Media Section -->
+    <section id="media" class="media">
+        <div class="container">
+            <h2 class="section-title">Media & Audio</h2>
+            <p class="section-subtitle">Experience our audio jingles and promotional videos</p>
+            
+            <div class="media-grid">
+                <div class="media-card audio-card">
+                    <div class="media-header">
+                        <i class="fas fa-music"></i>
+                        <h3>Advert Jingle</h3>
+                    </div>
+                    <p>Professional audio jingle for your brand</p>
+                    <audio controls class="audio-player">
+                        <source src="audio/jingle.mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+
+                <div class="media-card video-card">
+                    <div class="media-header">
+                        <i class="fas fa-video"></i>
+                        <h3>Promotional Video</h3>
+                    </div>
+                    <p>High-quality promotional video content</p>
+                    <video controls class="video-player">
+                        <source src="videos/promo.mp4" type="video/mp4">
+                        Your browser does not support the video element.
+                    </video>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <p class="section-subtitle">Ready to showcase your business? Contact us today</p>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="info-card">
+                        <i class="fas fa-envelope"></i>
+                        <h3>Email</h3>
+                        <p><a href="mailto:ads@nacoads.com">ads@nacoads.com</a></p>
+                    </div>
+
+                    <div class="info-card">
+                        <i class="fas fa-phone"></i>
+                        <h3>Phone</h3>
+                        <p><a href="tel:+234800000000">+234 800 000 0000</a></p>
+                    </div>
+
+                    <div class="info-card">
+                        <i class="fas fa-share-alt"></i>
+                        <h3>Follow Us</h3>
+                        <div class="social-links">
+                            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" title="Facebook">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" title="Twitter">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" title="Instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-button">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 NACOads. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
