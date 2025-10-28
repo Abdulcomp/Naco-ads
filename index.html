@@ -205,7 +205,7 @@
                 <form
   class="contact-form"
   id="contactForm"
-  action="https://formspree.io/f/xjkpybvl"  <!-- Replace this with your actual Formspree link -->
+  action="https://formspree.io/f/xjkpybvl"
   method="POST"
 >
   <div class="form-group">
@@ -228,7 +228,7 @@
     <textarea id="message" name="message" rows="5" required></textarea>
   </div>
 
-  <!-- Optional: redirect to thank you page after submission -->
+  <!-- Optional: redirect to thank you page -->
   <input type="hidden" name="_next" value="https://abdulcomp.github.io/nacoads/thankyou.html">
 
   <button type="submit" class="submit-button">Send Message</button>
@@ -236,19 +236,8 @@
   <!-- Message display -->
   <p id="formStatus" style="margin-top:10px; font-weight:600;"></p>
 </form>
-            </div>
-        </div>
-    </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2025 NACOads. All rights reserved.</p>
-        </div>
-    </footer>
-
-    <script src="script.js"></script>
-    <script>
+<script>
 document.getElementById("contactForm").addEventListener("submit", async function (e) {
   e.preventDefault();
   const form = e.target;
@@ -259,9 +248,9 @@ document.getElementById("contactForm").addEventListener("submit", async function
 
   try {
     const response = await fetch(form.action, {
-      method: form.method,
+      method: "POST",
       body: new FormData(form),
-      headers: { Accept: "application/json" },
+      headers: { "Accept": "application/json" },
     });
 
     if (response.ok) {
@@ -269,14 +258,20 @@ document.getElementById("contactForm").addEventListener("submit", async function
       formStatus.style.color = "green";
       form.reset();
     } else {
-      formStatus.textContent = "❌ Something went wrong. Please try again.";
+      const data = await response.json();
+      if (data.errors) {
+        formStatus.textContent = "❌ " + data.errors.map(e => e.message).join(", ");
+      } else {
+        formStatus.textContent = "❌ Something went wrong. Please try again.";
+      }
       formStatus.style.color = "red";
     }
   } catch (error) {
+    console.error(error);
     formStatus.textContent = "⚠️ Network error. Please check your connection.";
     formStatus.style.color = "red";
   }
 });
-      </script>
+</script>
 </body>
 </html>
